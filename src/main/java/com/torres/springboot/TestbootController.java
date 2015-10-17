@@ -34,6 +34,7 @@ public class TestbootController {
 			@RequestParam(required = true) String flow			
 			){
 		
+		// routeType에 따라 logic 
 		switch(routeType){
 		
 			case "kafka":  
@@ -52,6 +53,7 @@ public class TestbootController {
 		return null ;
 	}
 	
+	//.......................................................
 	// test input Json data
 	@RequestMapping(value="/datainput")
 	public @ResponseBody String insertTestData(

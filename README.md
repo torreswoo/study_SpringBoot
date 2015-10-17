@@ -57,8 +57,27 @@
 	- ex) { "_index" : "host-raw", "_type" : "healthcheck-raw", "host" : "localhost", "logObject" : 1 }
 	
 - springBoot에서 받기 
-	- @RequestBody로 Object로 받음 Setter/Getter설정이되어있음
+	- @RequestBody로 Object로 받음 Setter/Getter설정이 되어있음
 
 - Json Parsing : Jackson / Gson
 	
 ### Generic / Collection
+#### Generic 타입 
+- 모든 자바객체는 Object로 저장되고 관리되어져, collection에 저장할수있다. 문제는 이런 컬랙션이 어떤것이 담아져있는지 확인하기위한 방법이 실행시에 알수 다는 것이 문제가 될수있다.
+- Generic타입 이란것은 프로그램의 안전성을 컴파일 단계에서부터 제시하여 <>사이에 선언된 객체 자료형이 아닌 다른 객체형이 저장되는 것을 허용하지 않게한다.
+
+- Parameterized Type 파라미터타입 : <>
+	- <T> / <E> / <K> / <V>
+- Wildcard Type 와일드카드 타입 : <>>
+	- <?> : 객체내부의 모든 제네릭타입은 Object로 인식한다.
+	- <? super 객체자료형> : 
+	- <? extends 객체자료형> : 명시된 객체자료형 하위 객체의 타입으로 제한한다.
+
+#### Java Collection Framework
+- 객체들을 한곳에 모아 관리하고 그것을 편하게 사용하기위해 제공되는 환경.
+	- interfaces : 컬랙션들이 가져야하는 조직 / 기능을 추상적으로 표현
+	- Implementations : 위의 인터페이스를 구체적으로 구현한 클래스를 의미한다. 
+	- Algorithms : 구현한 객체들의 검색과 정렬과같은 유용한 동작, 즉 메서드 
+ 
+
+
