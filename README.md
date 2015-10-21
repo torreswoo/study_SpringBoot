@@ -104,11 +104,14 @@ compile 'org.elasticsearch:elasticsearch:1.5.2'
 #### Client / Index / CRUD(GET, DELETE, UPDATE) / SEARCH / Aggregation
 - Client
 	- Node Client
-	- Transport Client
+	- Transport Client : port 9300
 	
 - Index API
-	- 
 - Get API
+- Search API
+- MultiSearch API
+- Bulk API : curl -XPOST localhost:9200/cars/transcations/_bulk --data-binary "@carsInfo"
+- Aggregation API : GET /cars/transactions/_search?search_type=count {...}
 
 
 
